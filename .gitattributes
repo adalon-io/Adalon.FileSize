@@ -6,7 +6,7 @@
 .gitignore text eol=lf
 .gitconfig text eol=lf
 
-# Code (Windows dev team)
+# Code 
 
 *.cs         text eol=crlf diff=csharp
 *.xaml       text eol=crlf

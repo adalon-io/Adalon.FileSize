@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adalon.FileSize", "src\Adalon.FileSize\Adalon.FileSize.csproj", "{2F454456-1DD6-49E1-8CB9-7BE3F309BD3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adalon.FileSize", "src\Adalon.FileSize\Adalon.FileSize.csproj", "{2F454456-1DD6-49E1-8CB9-7BE3F309BD3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adalon.FileSize.Tests", "src\Adalon.FileSize.Tests\Adalon.FileSize.Tests.csproj", "{D9DD1E47-8121-457D-BF43-4B650E03DDE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2F454456-1DD6-49E1-8CB9-7BE3F309BD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F454456-1DD6-49E1-8CB9-7BE3F309BD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F454456-1DD6-49E1-8CB9-7BE3F309BD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DD1E47-8121-457D-BF43-4B650E03DDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DD1E47-8121-457D-BF43-4B650E03DDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DD1E47-8121-457D-BF43-4B650E03DDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DD1E47-8121-457D-BF43-4B650E03DDE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
