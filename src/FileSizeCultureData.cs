@@ -6,14 +6,21 @@ namespace Adalon.IO
 {
     public class FileSizeCultureData
     {
+        private static readonly FileSizeCultureData InvariantInstance = new FileSizeCultureData();
+
         public static FileSizeCultureData GetData(string cultureName)
         {
-            throw new NotImplementedException();
+            if (cultureName == null)
+            {
+                return InvariantInstance;
+            }
+
+            return null;
         }
 
         public static bool ContainsData(string cultureName)
         {
-            throw new NotImplementedException();
+            return cultureName == null;
         }
     }
 }

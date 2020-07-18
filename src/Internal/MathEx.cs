@@ -6,7 +6,12 @@ namespace Adalon.IO
     {
         private const ulong DeBruijnSequence64 = 0x03F79D71B4CB0A89;
 
+#if NETCOREAPP
+
         private static ReadOnlySpan<byte> DeBruijnBitTable64 => new byte[]
+#else
+        private static readonly byte[] DeBruijnBitTable64 = 
+#endif
         {
             0, 47, 1, 56, 48, 27, 2, 60,
             57, 49, 41, 37, 28, 16, 3, 61,
@@ -17,6 +22,8 @@ namespace Adalon.IO
             25, 39, 14, 33, 19, 30, 9, 24,
             13, 18, 8, 12, 7, 6, 5, 63
         };
+
+        
 
         internal static byte Log2(ulong value)
         {

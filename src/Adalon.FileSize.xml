@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adalon.FileSize</name>
+    </assembly>
+    <members>
+        <member name="T:Adalon.IO.FileSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Adalon.IO.FileSize.#ctor(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="P:Adalon.IO.FileSize.InBytes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Adalon.IO.FileSize.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Adalon.IO.FileSize.ToString(System.String,System.IFormatProvider)">
+            <summary>Formats the value of the current instance using the specified format.</summary>
+            <param name="format">The format to use.   -or-   A null reference (Nothing in Visual Basic) to use the default format defined for the type of the <see cref="T:System.IFormattable"></see> implementation.</param>
+            <param name="formatProvider">The provider to use to format the value.   -or-   A null reference (Nothing in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.</param>
+            <returns>The value of the current instance in the specified format.</returns>
+        </member>
+        <member name="M:Adalon.IO.FileSize.op_Addition(Adalon.IO.FileSize,Adalon.IO.FileSize)">
+            <summary>
+            
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adalon.IO.FileSizeFormatInfo.GetFormat(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:Adalon.IO.FileSizeFormatInfo.Clone">
+            <inheritdoc />
+        </member>
+        <member name="M:Adalon.IO.FileSizeFormatInfo.Equals(Adalon.IO.FileSizeFormatInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Adalon.IO.FileSizeFormatInfo.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Adalon.IO.FileSizeFormatInfo.GetHashCode">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
