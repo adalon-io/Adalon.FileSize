@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-#if NET40
+#if BEFORE_NETSTANDARD
 using System.Runtime.Remoting.Messaging;
 #endif
 using System.Text;
@@ -14,7 +14,7 @@ namespace Adalon.IO
         private readonly FileSizeCultureData _cultureData;
         private readonly NumberFormatInfo _numberFormat;
 
-#if NET40
+#if BEFORE_NETSTANDARD
         private const string CurrentInfoCacheStoreKey = "__Adalon.IO.FileSizeFormatInfo.CurrentInfoCacheStoreKey";
 #else
         private static  readonly AsyncLocal<FileSizeFormatInfo> CurrentInfoCacheStore = new AsyncLocal<FileSizeFormatInfo>();
@@ -24,7 +24,7 @@ namespace Adalon.IO
 
         private static FileSizeFormatInfo CurrentInfoCache
         {
-#if NET40
+#if BEFORE_NETSTANDARD
             get => CallContext.LogicalGetData(CurrentInfoCacheStoreKey) as FileSizeFormatInfo;
             set => CallContext.LogicalSetData(CurrentInfoCacheStoreKey, value);
 #else
