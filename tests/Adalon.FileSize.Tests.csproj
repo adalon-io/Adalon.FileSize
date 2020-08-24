@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net48;net461;net40</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net48;net461;net35;net40</TargetFrameworks>
     <IsPackable>false</IsPackable>
     <RootNamespace>Adalon.IO.Tests</RootNamespace>
   </PropertyGroup>

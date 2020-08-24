@@ -20,7 +20,7 @@ namespace Adalon.IO
 
         public static string Format(long value, string format, FileSizeFormatInfo formatInfo)
         {
-            if (string.IsNullOrWhiteSpace(format)) format = "W";
+            if (Utils.IsNullOrWhiteSpace(format)) format = "W";
             if (formatInfo == null) formatInfo = FileSizeFormatInfo.CurrentInfo;
             if (format.Length == 1)
             {
