@@ -43,7 +43,7 @@ namespace Adalon.IO.Tests
             var positive = new FileSize(value);
             var negative = new FileSize(-1*value);
             Assert.AreEqual(expectedPositive,FormatWindows(positive),"Positive format does not match expected");
-            Assert.AreEqual(expectedNegative,FormatWindows(negative),"Positive format does not match expected");
+            Assert.AreEqual(expectedNegative,FormatWindows(negative),"Negative format does not match expected");
         }
 
         [TestCase(FileSizeUnit.B,"1 bytes")]

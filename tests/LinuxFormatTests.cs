@@ -40,7 +40,7 @@ namespace Adalon.IO.Tests
             var value = 1L << (power * 10);
             var fileSize = new FileSize(value);
             Assert.AreEqual(expectedShort,FormatLinux(fileSize,"l"),"Short unit value format does not match expected");
-            Assert.AreEqual(expectedLong,FormatLinux(fileSize,"L"),"Short unit value format does not match expected");
+            Assert.AreEqual(expectedLong,FormatLinux(fileSize,"L"),"Long unit value format does not match expected");
         }
 
         [TestCase(FileSizeUnit.B,"1B","1B")]
@@ -56,7 +56,7 @@ namespace Adalon.IO.Tests
             var value = (long) Math.Pow(1000,power);
             var fileSize = new FileSize(value);
             Assert.AreEqual(expectedShort,FormatLinux(fileSize,"ld"),"Short unit value format does not match expected");
-            Assert.AreEqual(expectedLong,FormatLinux(fileSize,"LD"),"Short unit value format does not match expected");
+            Assert.AreEqual(expectedLong,FormatLinux(fileSize,"LD"),"Long unit value format does not match expected");
         }
 
         [TestCase(0L,"0B", "0B")]
@@ -71,7 +71,7 @@ namespace Adalon.IO.Tests
             var positive = new FileSize(value);
             var negative = new FileSize(-1*value);
             Assert.AreEqual(expectedPositive,FormatLinux(positive),"Positive format does not match expected");
-            Assert.AreEqual(expectedNegative,FormatLinux(negative),"Positive format does not match expected");
+            Assert.AreEqual(expectedNegative,FormatLinux(negative),"Negative format does not match expected");
         }
 
         [TestCase(0L,"0B", "0B")]
@@ -85,7 +85,7 @@ namespace Adalon.IO.Tests
             var positive = new FileSize(value);
             var negative = new FileSize(-1*value);
             Assert.AreEqual(expectedPositive,FormatLinux(positive,"LD"),"Positive format does not match expected");
-            Assert.AreEqual(expectedNegative,FormatLinux(negative,"LD"),"Positive format does not match expected");
+            Assert.AreEqual(expectedNegative,FormatLinux(negative,"LD"),"Negative format does not match expected");
         }
 
         [TestCase(1024L,"1.0KiB")]
@@ -99,7 +99,7 @@ namespace Adalon.IO.Tests
         public void Rounding(long value, string expected)
         {
             var fileSize = new FileSize(value);
-            Assert.AreEqual(expected,FormatLinux(fileSize));
+            Assert.AreEqual(expected,FormatLinux(fileSize),"Rounding result does not match expected");
         }
 
         [TestCase(1000L,"1.0KB")]
@@ -113,7 +113,7 @@ namespace Adalon.IO.Tests
         public void SiRounding(long value, string expected)
         {
             var fileSize = new FileSize(value);
-            Assert.AreEqual(expected,FormatLinux(fileSize,"LD"));
+            Assert.AreEqual(expected,FormatLinux(fileSize,"LD"),"Rounding result does not match expected");
         }
     }
 }
